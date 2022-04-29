@@ -12,6 +12,7 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             Variables();
             DataOutput();
             Conversion();
+            ArithmeticOperators();
         }
 
         public static void Variables() {
@@ -211,6 +212,28 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             b = (float)a;
 
             //Lembre-se de converter para a o tipo da variável que vai armazenar
+        }
+
+        public static void ArithmeticOperators() {
+            /* Operadores Aritméticos
+            + - Adição
+            - - Subtração
+            * - Multiplicação
+            / - Divisão
+            % - Módulo (resto da divisão)
+            */
+
+            int n1 = 2 + 2; //4
+            int n2 = 2 - 2; //0
+            int n3 = 2 * 2; //4
+            int n4 = 2 / 2; //1
+            int n5 = 2 % 2; //0
+
+            Console.WriteLine(n1);
+            Console.WriteLine(n2);
+            Console.WriteLine(n3);
+            Console.WriteLine(n4);
+            Console.WriteLine(n5);  
         }
     }
 }
