@@ -9,10 +9,11 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
     class Estudos { //Classe
         public static void Main(string[] args) { //Membro da classe. (string[] args = entryPoint 'primeira execução' da aplicação)
             Console.WriteLine("Hello World!");
-            Variables();
-            DataOutput();
-            Conversion();
-            ArithmeticOperators();
+            //Variables();
+            //DataOutput();
+            //Conversion();
+            //ArithmeticOperators();
+            DataInput();
         }
 
         public static void Variables() {
@@ -234,6 +235,84 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             Console.WriteLine(n3);
             Console.WriteLine(n4);
             Console.WriteLine(n5);  
+        }
+
+        public static void DataInput() {
+            /* Entrada de dados
+            ReadLine() - Pega o que você digitou e passa a uma variável
+            */
+
+            Console.Write("Diga uma frase: ");
+            string phrase = Console.ReadLine();
+            Console.WriteLine($"Você disse: {phrase}");
+
+            /* Split
+            Separa strings por meio de uma tecla escolhida
+            */
+
+            string[] splitPhrase = phrase.Split(' '); //Tecla escolhida 'espaço'
+            for (int i = 0; i < splitPhrase.Length; i++) {
+                Console.WriteLine($"Palvra {i + 1}: {splitPhrase[i]}");
+            }
+
+            /* Parse 
+            Converte a cadeia de caracteres equivalente a 32 bits
+            */
+
+            Console.WriteLine("Diga um número: ");
+            int n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Diga outro número: ");
+            double n2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Diga um caractere: ");
+            char ch = char.Parse(Console.ReadLine());
+
+            Console.WriteLine(n1);
+            Console.WriteLine(n2);
+            Console.WriteLine(ch);
+
+            /* Exercício 
+            Fazer um programa para executar a seguinte interação com o usuário,
+            lendo os valores destacados com a hashtag, e depois mostrar os 
+            dados na tela
+
+            Entrada 
+
+            Entre com seu nome completo:
+            #Alex Green
+            Quantos quartos tem na sua casa?
+            #3
+            Entre com o preço de um produto: 
+            #500.50
+            Entre com seu último nome, idade e altura (mesma linha):
+            #Green 21 1.73
+
+            Saída 
+
+            Alex Green
+            3
+            500.50
+            Green
+            21
+            1.73
+            */
+
+            Console.WriteLine("Entre com seu nome completo: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Quantos quartos tem na sua casa? ");
+            int bedrooms = int.Parse(Console.ReadLine());
+            Console.WriteLine("Entre com o preço de um produto: ");
+            double price = double.Parse(Console.ReadLine());
+            price.ToString("F2", CultureInfo.InvariantCulture);
+            Console.WriteLine("Entre com seu último nome, idade e altura: ");
+            string answersQuestions = Console.ReadLine();
+            string[] answers = answersQuestions.Split(' ');
+            string lastName = answers[0];
+            int age = int.Parse(answers[1]);
+            double height = double.Parse(answers[2]);
+
+            Console.WriteLine(lastName);
+            Console.WriteLine(age);
+            Console.WriteLine(height.ToString(CultureInfo.InvariantCulture)); 
         }
     }
 }
