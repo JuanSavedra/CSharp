@@ -14,7 +14,8 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             //Conversion();
             //ArithmeticOperators();
             //DataInput();
-            ComparativeOperators();
+            //ComparativeOperators();
+            LogicalOperators();
         }
 
         public static void Variables() {
@@ -340,6 +341,37 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             b = a == 10; //True
             Console.WriteLine(b);
             b = a != 10; //Falso
+            Console.WriteLine(b);
+        }
+
+        public static void LogicalOperators() {
+            /* Operadores Lógicos
+            && - E (Só retorna True quando as duas ou mais verificações passam)
+            || - Ou (Só retorna True quando uma das verificações passam)
+            ! - Não (Retorna o oposto)
+            */
+
+            int a = 10;
+            bool b;
+
+            b = a <= 10 && a == 10; //True
+            Console.WriteLine(b);
+            b = a < 10 && a == 10; //False
+            Console.WriteLine(b);
+            b = a < 10 && a > 10; //False
+            Console.WriteLine(b);
+
+            b = a <= 10 || a == 10; //True
+            Console.WriteLine(b);
+            b = a < 10 || a == 10; //True
+            Console.WriteLine(b);
+            b = a < 10 || a > 10; //False
+            Console.WriteLine(b);
+
+            b = true;
+            b = !b; //False
+            Console.WriteLine(b);
+            b = !b; //True
             Console.WriteLine(b);
         }
     }
