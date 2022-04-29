@@ -13,7 +13,8 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             //DataOutput();
             //Conversion();
             //ArithmeticOperators();
-            DataInput();
+            //DataInput();
+            ComparativeOperators();
         }
 
         public static void Variables() {
@@ -313,6 +314,33 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             Console.WriteLine(lastName);
             Console.WriteLine(age);
             Console.WriteLine(height.ToString(CultureInfo.InvariantCulture)); 
+        }
+
+        public static void ComparativeOperators() {
+            /* Operadores Comparativos 
+            > - Maior 
+            < - Menor
+            >= - Maior ou igual 
+            <= - Menor ou igual
+            == - Igual
+            != - Diferente 
+            */
+
+            bool b;
+            int a = 10;
+
+            b = a > 10; //Falso
+            Console.WriteLine(b);
+            b = a < 10; //Falso
+            Console.WriteLine(b);
+            b = a >= 10; //True
+            Console.WriteLine(b);
+            b = a <= 10; // True
+            Console.WriteLine(b);
+            b = a == 10; //True
+            Console.WriteLine(b);
+            b = a != 10; //Falso
+            Console.WriteLine(b);
         }
     }
 }
