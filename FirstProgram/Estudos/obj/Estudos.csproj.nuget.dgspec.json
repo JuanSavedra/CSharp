@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juans\\Documents\\Estudos\\C#\\Estudos\\Estudos\\Estudos.csproj": {}
+    "C:\\Users\\juans\\Documents\\Estudos\\C#\\FirstProgram\\Estudos\\Estudos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juans\\Documents\\Estudos\\C#\\Estudos\\Estudos\\Estudos.csproj": {
+    "C:\\Users\\juans\\Documents\\Estudos\\C#\\FirstProgram\\Estudos\\Estudos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juans\\Documents\\Estudos\\C#\\Estudos\\Estudos\\Estudos.csproj",
+        "projectUniqueName": "C:\\Users\\juans\\Documents\\Estudos\\C#\\FirstProgram\\Estudos\\Estudos.csproj",
         "projectName": "Estudos",
-        "projectPath": "C:\\Users\\juans\\Documents\\Estudos\\C#\\Estudos\\Estudos\\Estudos.csproj",
+        "projectPath": "C:\\Users\\juans\\Documents\\Estudos\\C#\\FirstProgram\\Estudos\\Estudos.csproj",
         "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juans\\Documents\\Estudos\\C#\\Estudos\\Estudos\\obj\\",
+        "outputPath": "C:\\Users\\juans\\Documents\\Estudos\\C#\\FirstProgram\\Estudos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
