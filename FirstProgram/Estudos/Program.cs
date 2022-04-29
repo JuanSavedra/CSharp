@@ -11,6 +11,7 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             Console.WriteLine("Hello World!");
             Variables();
             DataOutput();
+            Conversion();
         }
 
         public static void Variables() {
@@ -195,6 +196,21 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             a = 0;
             Console.WriteLine(++a); //1
             Console.WriteLine(--a); //0
+        }
+
+        public static void Conversion() {
+            /* Casting
+            O casting é uma conversão que você faz de uma variável a outra, por exemplo,
+            a variável double não pode ser armazenada em uma variável float, pois os bytes
+            são diferentes em cada uma, então fazemos o seguinte:
+            */
+
+            double a = 4.5;
+            float b;
+
+            b = (float)a;
+
+            //Lembre-se de converter para a o tipo da variável que vai armazenar
         }
     }
 }
