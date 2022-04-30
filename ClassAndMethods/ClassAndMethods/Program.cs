@@ -9,7 +9,8 @@ namespace ClassAndMethods {
             //Exercise1();
             //Exercise2();
             //ProblemWithObjectsAndToString();
-            Exercise3();
+            //Exercise3();
+            Exercise4();
         }
 
         static void ProblemNoOO() {
@@ -212,14 +213,55 @@ namespace ClassAndMethods {
 
             Console.WriteLine("Diga a altura e a largura do retângulo: ");
             rect.width = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            rect.height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);   
+            rect.height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Console.WriteLine($"Área: {rect.Area().ToString("F2", CultureInfo.InvariantCulture)}");
             Console.WriteLine($"Perímetro: {rect.Perimeter().ToString("F2", CultureInfo.InvariantCulture)}");
         }
 
         static void Exercise4() {
+            /* 
+            Fazer um programa para ler os dados de um funcionário 
+            (nome, salário bruto e imposto). Em seguida, mostrar 
+            os dados do funcionário (nome e salário líquido). Em
+            seguida, aumentar o salário do funcionário com base 
+            em uma porcentagem dada (somente o salário bruto é 
+            afetado pela porcentagem) e mostrar novamente os dados
+            do funcionário. Use a classe projetada abaixo.
 
+            Funcionário | Nome: string, SalárioBruto: double, 
+            Imposto: double
+            SalárioLíquido(): double 
+            AumentarSalário(porcentagem: double): void 
+            */
+
+            Functionary functionary;
+            functionary = new Functionary();
+
+            Console.Write("Nome: ");
+            functionary.name = Console.ReadLine();
+
+            Console.Write("Salário Bruto: ");
+            functionary.grossSalary = double.Parse(
+                Console.ReadLine(), CultureInfo.InvariantCulture
+            );
+
+            Console.Write("Imposto: ");
+            functionary.tax = double.Parse(
+                Console.ReadLine(), CultureInfo.InvariantCulture
+            );
+
+            Console.WriteLine($"\nFuncionário: {functionary}");
+
+            Console.WriteLine(
+                $"Digite a porcentagem para aumentar o salário de {functionary.name}: "
+            );
+            functionary.SalaryIncrease(
+                double.Parse(Console.ReadLine(), 
+                CultureInfo.InvariantCulture)
+            );
+
+            Console.WriteLine($"Dados atualizados: {functionary}");
         }
     }
 }
