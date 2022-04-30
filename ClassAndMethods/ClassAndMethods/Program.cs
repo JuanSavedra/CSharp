@@ -6,7 +6,8 @@ namespace ClassAndMethods {
         static void Main(string[] args) {
             //ProblemNoOO();
             //ProblemWithOO(); // OO = Orientação a Objetos
-            Exercise1();
+            //Exercise1();
+            Exercise2();
         }
 
         static void ProblemNoOO() {
@@ -129,6 +130,26 @@ namespace ClassAndMethods {
             Fazer um programa para ler o nome e salário de dois funcionários.
             Depois, mostrar o salário médio dos funcionários.
             */
+
+            double averageSalary; 
+            Employee employeeX, employeeY;
+            employeeX = new Employee();
+            employeeY = new Employee(); 
+
+            Console.WriteLine("Dados do primeiro funcionário: ");
+            Console.Write("Nome: ");
+            employeeX.name = Console.ReadLine();
+            Console.Write("Salário: ");
+            employeeX.salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.WriteLine("Dados do segundo funcionário: ");
+            Console.Write("Nome: ");
+            employeeY.name = Console.ReadLine();
+            Console.Write("Salário: ");
+            employeeY.salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            averageSalary = (employeeX.salary + employeeY.salary) / 2;
+            Console.WriteLine($"Salário médio: {averageSalary.ToString("F2", CultureInfo.InvariantCulture)}");
         }
     }
 }
