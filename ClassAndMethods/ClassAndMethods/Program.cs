@@ -5,7 +5,8 @@ namespace ClassAndMethods {
     class Program {
         static void Main(string[] args) {
             //ProblemNoOO();
-            ProblemWithOO(); // OO = Orientação a Objetos
+            //ProblemWithOO(); // OO = Orientação a Objetos
+            Exercise1();
         }
 
         static void ProblemNoOO() {
@@ -88,6 +89,46 @@ namespace ClassAndMethods {
             else {
                 Console.WriteLine("Áreas iguais.");
             }
+        }
+
+        static void Exercise1() {
+            /* 
+            Fazer um programa para ler os dados de duas pessoas, depois mostrar
+            o nome da pessoa mais velha
+            */
+
+            Person personX, personY;
+            personX = new Person();
+            personY = new Person();
+
+            Console.WriteLine("Dados da primeira pessoa: ");
+            Console.Write("Nome: ");
+            personX.name = Console.ReadLine();
+            Console.Write("Idade: ");
+            personX.age = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Dados da segunda pessoa: ");
+            Console.Write("Nome: ");
+            personY.name = Console.ReadLine();
+            Console.Write("Idade: ");
+            personY.age = int.Parse(Console.ReadLine());
+
+            if (personX.age > personY.age) {
+                Console.WriteLine($"Pessoa mais velha: {personX.name}");
+            }
+            else if (personY.age > personX.age) {
+                Console.WriteLine($"Pessoa mais velha: {personY.name}");
+            }
+            else {
+                Console.WriteLine($"Pessoa mais velha: Nenhuma");
+            }
+        }
+
+        static void Exercise2() {
+            /* 
+            Fazer um programa para ler o nome e salário de dois funcionários.
+            Depois, mostrar o salário médio dos funcionários.
+            */
         }
     }
 }
