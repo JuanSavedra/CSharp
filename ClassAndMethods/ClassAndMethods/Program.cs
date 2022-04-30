@@ -294,5 +294,23 @@ namespace ClassAndMethods {
 
             student.Aproved();
         }
+
+        /* Explicando sobre funções estáticas (static)
+        Elas não podem ser instanciadas, então só podem ser chamadas dentro 
+        delas mesmas, funções estáticas também só podem receber funções 
+        estáticas dentro delas.
+        Funções estáticas se tornam independentes de objetos, ou seja, 
+        chamamos elas diretamente pelo nome da classe.
+        Exemplo: 
+        Class Calculadora
+        public static double pi = 3,14;
+
+        //Em outro script
+        Calculadora.pi
+
+        #Não precisamos instanciar a calculadora com:
+        Calculadora calc;
+        calc = new Calculadora();
+        */
     }
 }
