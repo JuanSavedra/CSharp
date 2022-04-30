@@ -4,10 +4,11 @@ using System.Globalization;
 namespace ClassAndMethods {
     class Program {
         static void Main(string[] args) {
-            Problem();
+            //ProblemNoOO();
+            ProblemWithOO(); // OO = Orientação a Objetos
         }
 
-        static void Problem() {
+        static void ProblemNoOO() {
             /* Resolvendo um problema sem orientação a objetos 
             Fazer um programa para ler as medidas dos lados de dois triângulos
             X e Y (suponha medidas válidas). Em seguida mostrar o valor das
@@ -39,6 +40,41 @@ namespace ClassAndMethods {
 
             areaX = Math.Sqrt(pX * (pX - triangleXA) * (pX - triangleXB) * (pX - triangleXC));
             areaY = Math.Sqrt(pY * (pY - triangleYA) * (pY - triangleYB) * (pY - triangleYC));
+
+            Console.WriteLine($"Área de X: {areaX.ToString("F4", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Área de Y: {areaY.ToString("F4", CultureInfo.InvariantCulture)}");
+
+            if (areaX > areaY) {
+                Console.WriteLine("Maior área: X.");
+            }
+            else if (areaY > areaX) {
+                Console.WriteLine("Maior área: Y.");
+            }
+            else {
+                Console.WriteLine("Áreas iguais.");
+            }
+        }
+
+        static void ProblemWithOO() {
+            Triangle x, y;
+            double areaX, areaY, p;
+
+            x = new Triangle();
+            y = new Triangle();
+
+            Console.WriteLine("Entre com as medidas do triângulo X: ");
+            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            p = (x.A + x.B + x.C) / 2.0;
+            areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+
+            Console.WriteLine("Entre com as medidas do triângulo Y: ");
+            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            p = (y.A + y.B + y.C) / 2.0;
+            areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
 
             Console.WriteLine($"Área de X: {areaX.ToString("F4", CultureInfo.InvariantCulture)}");
             Console.WriteLine($"Área de Y: {areaY.ToString("F4", CultureInfo.InvariantCulture)}");
