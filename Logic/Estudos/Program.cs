@@ -17,7 +17,8 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             //ComparativeOperators();
             //LogicalOperators();
             //ConditionalStructure();
-            Functions();
+            // Functions();
+            RepetitionStructure();
         }
 
         static void Variables() {
@@ -426,6 +427,43 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
                 int result = x + y;
                 Console.WriteLine(result);
                 return result; //Retornando o valor
+            }
+        }
+
+        static void RepetitionStructure() {
+            /* Estruturas de repetição 
+            for - Para
+            while - Enquanto
+            do while - Faça enquanto (Primeiro executa e depois confere, garantindo pelo menos uma execução)
+            */
+
+            int a = 0;
+
+            while (a < 10) {
+                if (a < 9) {
+                    Console.Write($"{a} "); /* 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 */
+                } else {
+                    Console.Write($"{a} \n");
+                }
+
+                a++;
+            }
+
+            a = 0;
+
+            do {
+                if (a < 9) {
+                    Console.Write($"{a} "); /* 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 */
+                }
+                else {
+                    Console.Write($"{a} \n");
+                }
+
+                a++; 
+            } while (a < 10);
+
+            for (int i = 0; i < 10; i ++) {
+                Console.Write($"{i} "); /* 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 */
             }
         }
     }
