@@ -1,0 +1,15 @@
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\bin\Debug\net6.0\ClassAndMethods.exe
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\bin\Debug\net6.0\ClassAndMethods.deps.json
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\bin\Debug\net6.0\ClassAndMethods.runtimeconfig.json
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\bin\Debug\net6.0\ClassAndMethods.dll
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\bin\Debug\net6.0\ClassAndMethods.pdb
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\ClassAndMethods.csproj.AssemblyReference.cache
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\ClassAndMethods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\ClassAndMethods.AssemblyInfoInputs.cache
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\ClassAndMethods.AssemblyInfo.cs
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\ClassAndMethods.csproj.CoreCompileInputs.cache
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\ClassAndMethods.dll
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\refint\ClassAndMethods.dll
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\ClassAndMethods.pdb
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\ClassAndMethods.genruntimeconfig.cache
+C:\Users\juans\Documents\Estudos\C#\ClassAndMethods\ClassAndMethods\obj\Debug\net6.0\ref\ClassAndMethods.dll
