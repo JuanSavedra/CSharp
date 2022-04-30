@@ -5,9 +5,10 @@ namespace ClassAndMethods {
     class Program {
         static void Main(string[] args) {
             //ProblemNoOO();
-            ProblemWithOO(); // OO = Orientação a Objetos
+            //ProblemWithOO(); // OO = Orientação a Objetos
             //Exercise1();
             //Exercise2();
+            ProblemWithObjectsAndToString();
         }
 
         static void ProblemNoOO() {
@@ -130,10 +131,10 @@ namespace ClassAndMethods {
             Depois, mostrar o salário médio dos funcionários.
             */
 
-            double averageSalary; 
+            double averageSalary;
             Employee employeeX, employeeY;
             employeeX = new Employee();
-            employeeY = new Employee(); 
+            employeeY = new Employee();
 
             Console.WriteLine("Dados do primeiro funcionário: ");
             Console.Write("Nome: ");
@@ -149,6 +150,48 @@ namespace ClassAndMethods {
 
             averageSalary = (employeeX.salary + employeeY.salary) / 2;
             Console.WriteLine($"Salário médio: {averageSalary.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+
+        static void ProblemWithObjectsAndToString() {
+            /* Como deve ficar a saída do exercício
+            Entre os dados do produto:
+            Nome: #nome
+            Preço: #preço (double)
+            Quantidade no estoque: quantidade (int)
+
+            Dados do produto: #nome, R$#preço, #quantidade unidades, Total: R$#preço_total
+            
+            Digite o número de produtos a serem adicionados ao estoque: #quantidade
+
+            Dados atualizados: #nome, R$#preço, #quantidade unidades, Total: R$#preço_total
+
+            Digite o número de produtos a serem removidos do estoque: #quantidade
+
+            Dados atualizados: #nome, R$#preço, #quantidade unidades, Total: R$#preço_total
+            */
+
+            Product product;
+            product = new Product();
+
+            Console.WriteLine("Entre com os dados do produto: ");
+            Console.Write("Nome: ");
+            product.name = Console.ReadLine();
+            Console.Write("Preço: ");
+            product.price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantidade no estoque: ");
+            product.quantity = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"\nDados do produto: {product /* ou product.ToString() */}");
+
+            Console.WriteLine("\nDigite o número de produtos a serem adicionados ao estoque: ");
+            product.AddProduct(int.Parse(Console.ReadLine()));
+
+            Console.WriteLine($"\nDados atualizados: {product}");
+
+            Console.WriteLine("\nDigite o número de produtos a serem removidos do estoque: ");
+            product.RemoveProduct(int.Parse(Console.ReadLine()));
+
+            Console.WriteLine($"\nDados atualizados: {product}");
         }
     }
 }
