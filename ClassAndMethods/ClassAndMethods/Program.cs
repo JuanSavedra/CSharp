@@ -8,7 +8,8 @@ namespace ClassAndMethods {
             //ProblemWithOO(); // OO = Orientação a Objetos
             //Exercise1();
             //Exercise2();
-            ProblemWithObjectsAndToString();
+            //ProblemWithObjectsAndToString();
+            Exercise3();
         }
 
         static void ProblemNoOO() {
@@ -192,6 +193,33 @@ namespace ClassAndMethods {
             product.RemoveProduct(int.Parse(Console.ReadLine()));
 
             Console.WriteLine($"\nDados atualizados: {product}");
+        }
+
+        static void Exercise3() {
+            /*
+            Faça um programa para ler os valores da largura e altura 
+            de um retângulo. Em seguida, mostre na tela o valor de sua 
+            área e perímetro. Usar uma classe como mostrada no projeto 
+            abaixo.
+
+            Retângulo | Largura: double, Altura: double
+            Area(): double
+            Perimetro(): double
+            */
+
+            Rectangle rect;
+            rect = new Rectangle();
+
+            Console.WriteLine("Diga a altura e a largura do retângulo: ");
+            rect.width = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            rect.height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);   
+
+            Console.WriteLine($"Área: {rect.Area().ToString("F2", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Perímetro: {rect.Perimeter().ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+
+        static void Exercise4() {
+
         }
     }
 }
