@@ -7,7 +7,7 @@ Agrupamento de classes e programas
 
 namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não é algo obrigatório)
     class Estudos { //Classe
-        public static void Main(string[] args) { //Membro da classe. (string[] args = entryPoint 'primeira execução' da aplicação)
+        static void Main(string[] args) { //Membro da classe. (string[] args = entryPoint 'primeira execução' da aplicação)
             Console.WriteLine("Hello World!");
             //Variables();
             //DataOutput();
@@ -15,10 +15,12 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             //ArithmeticOperators();
             //DataInput();
             //ComparativeOperators();
-            LogicalOperators();
+            //LogicalOperators();
+            //ConditionalStructure();
+            Functions();
         }
 
-        public static void Variables() {
+        static void Variables() {
             sbyte a = 100; //Tipo do C# (Tipo do dotnet 'SByte')
             short b = 100;
             int c = 100; //Variável do tipo inteiro
@@ -72,7 +74,7 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             */
         }
 
-        public static void DataOutput() {
+        static void DataOutput() {
 
             float pi = 3.14159265359f;
             Console.WriteLine(pi.ToString("F2")); //Passa o valor de pi para apenas dois números após o ponto (3,14)
@@ -157,7 +159,7 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             // O '\n' pula ou quebra linhas 
         }
 
-        public static void AssignmentOperators() {
+        static void AssignmentOperators() {
             /* Operadores de Atribuição
             = - Igual
             += - Mais igual
@@ -202,7 +204,7 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             Console.WriteLine(--a); //0
         }
 
-        public static void Conversion() {
+        static void Conversion() {
             /* Casting
             O casting é uma conversão que você faz de uma variável a outra, por exemplo,
             a variável double não pode ser armazenada em uma variável float, pois os bytes
@@ -217,7 +219,7 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             //Lembre-se de converter para a o tipo da variável que vai armazenar
         }
 
-        public static void ArithmeticOperators() {
+        static void ArithmeticOperators() {
             /* Operadores Aritméticos
             + - Adição
             - - Subtração
@@ -236,10 +238,10 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             Console.WriteLine(n2);
             Console.WriteLine(n3);
             Console.WriteLine(n4);
-            Console.WriteLine(n5);  
+            Console.WriteLine(n5);
         }
 
-        public static void DataInput() {
+        static void DataInput() {
             /* Entrada de dados
             ReadLine() - Pega o que você digitou e passa a uma variável
             */
@@ -314,10 +316,10 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
 
             Console.WriteLine(lastName);
             Console.WriteLine(age);
-            Console.WriteLine(height.ToString(CultureInfo.InvariantCulture)); 
+            Console.WriteLine(height.ToString(CultureInfo.InvariantCulture));
         }
 
-        public static void ComparativeOperators() {
+        static void ComparativeOperators() {
             /* Operadores Comparativos 
             > - Maior 
             < - Menor
@@ -344,7 +346,7 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             Console.WriteLine(b);
         }
 
-        public static void LogicalOperators() {
+        static void LogicalOperators() {
             /* Operadores Lógicos
             && - E (Só retorna True quando as duas ou mais verificações passam)
             || - Ou (Só retorna True quando uma das verificações passam)
@@ -373,6 +375,58 @@ namespace Estudos { //Namespace Criado por Você (Questão de boa prática, não
             Console.WriteLine(b);
             b = !b; //True
             Console.WriteLine(b);
+        }
+
+        static void ConditionalStructure() {
+            /* Estrutura condicional
+            if - Se
+            else - Senão
+            else if - Senão se
+            */
+
+            Console.WriteLine("Digite um valor: ");
+            int a = int.Parse(Console.ReadLine());
+
+            if (a == 0) {
+                Console.WriteLine("A igual a 0.");
+            }
+            else if (a > 0) {
+                Console.WriteLine("A maior que 0.");
+            }
+            else {
+                Console.WriteLine("Valor negativo.");
+            }
+
+            //Verificando se é par ou ímpar
+
+            if (a % 2 == 0) {
+                Console.WriteLine("Par!");
+            }
+            else {
+                Console.WriteLine("Ímpar!");
+            }
+        }
+
+        static void Functions() {
+            /* Funções 
+            As funções são partes do código usadas para organizar e auxiliar em 
+            tarefas, temos funções de todos os tipos de variáveis e inclusive void
+            (tipo vazio). Elas podem receber parâmetros em seus parêneteses e também
+            podem retornar diretamente algum valor com um 'return'
+            */
+
+            InternalFunc();
+            Sum(8, 8 /* Passando os valores na declaração da função */);
+
+            void InternalFunc() {
+                Console.WriteLine("Função Interna.");
+            }
+
+            int Sum(int x, int y /* Parâmetros da função */) {
+                int result = x + y;
+                Console.WriteLine(result);
+                return result; //Retornando o valor
+            }
         }
     }
 }
