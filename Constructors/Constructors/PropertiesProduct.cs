@@ -9,9 +9,7 @@ namespace Constructors {
     class PropertiesProduct {
         private string _name;
         private double _price;
-        private int _quantity; /* Não permitindo que a variável quantidade seja acessada 
-                                * por programação externa (evita erros), normalmente é
-                                * usado um '_' na frente das variáveis privativas */
+        private int _quantity; 
 
         public PropertiesProduct(string name, double price, int quantity) {
             _name = name;

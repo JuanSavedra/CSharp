@@ -9,7 +9,8 @@ namespace Constructors {
             //AlternativeSyntax();
             //This();
             //Encapsulation();
-            Properties();
+            //Properties();
+            AutoProperties();
         }
 
         static void Constructors() {
@@ -115,6 +116,20 @@ namespace Constructors {
             */
 
             PropertiesProduct product = new PropertiesProduct("TV", 900.00, 10);
+            Console.WriteLine($"Nome do produto: {product.Name}");
+            Console.Write("Diga o novo nome do produto: ");
+            product.Name = Console.ReadLine();
+            Console.WriteLine($"Novo nome do produto: {product.Name}");
+            Console.WriteLine($"Dados gerais do produto: {product}");
+        }
+
+        static void AutoProperties() {
+            /* Propriedades autoimplementadas 
+            É uma forma simplificada de se declarar propriedades que não necessitam lógicas particulares 
+            para as operações get e set
+            */
+
+            AutoPropertiesProduct product = new AutoPropertiesProduct("TV", 900.00, 10);
             Console.WriteLine($"Nome do produto: {product.Name}");
             Console.Write("Diga o novo nome do produto: ");
             product.Name = Console.ReadLine();
