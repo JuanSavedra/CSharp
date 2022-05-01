@@ -10,7 +10,8 @@ namespace Constructors {
             //This();
             //Encapsulation();
             //Properties();
-            AutoProperties();
+            //AutoProperties();
+            AccessModifiers();
         }
 
         static void Constructors() {
@@ -135,6 +136,22 @@ namespace Constructors {
             product.Name = Console.ReadLine();
             Console.WriteLine($"Novo nome do produto: {product.Name}");
             Console.WriteLine($"Dados gerais do produto: {product}");
+        }
+        
+        static void AccessModifiers() {
+            /* Modificadores de Acesso 
+             * 1 - Própria classe
+             * 2 - Subclasses do assembly
+             * 3 - Classes do assembly
+             * 4 - Subclasses fora do assembly
+             * 5 - Classes fora do assembly
+            public - [1][2][3][4][5]
+            protected internal - [1][2][3][4]
+            internal - [1][2][3]
+            protected - [1][2][4]
+            private protected - [1][2]
+            private - [1]
+            */
         }
     }
 }
