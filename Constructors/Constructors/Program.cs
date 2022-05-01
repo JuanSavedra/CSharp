@@ -6,7 +6,8 @@ namespace Constructors {
         static void Main(string[] args) {
             //Constructors();
             //Overload();
-            AlternativeSyntax();
+            //AlternativeSyntax();
+            This();
         }
 
         static void Constructors() {
@@ -71,6 +72,17 @@ namespace Constructors {
             };
 
             Console.WriteLine(product);
+        }
+
+        static void This() {
+            /* This
+            Usos comuns: 
+            Diferenciar atributos de variáveis locais
+            Referenciar outro construtor em um construtor
+            Passar o próprio objeto como argumento na chamada de um método ou construtor
+            */
+
+
         }
     }
 }
