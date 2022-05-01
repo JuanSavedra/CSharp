@@ -8,7 +8,8 @@ namespace Constructors {
             //Overload();
             //AlternativeSyntax();
             //This();
-            Encapsulation();
+            //Encapsulation();
+            Properties();
         }
 
         static void Constructors() {
@@ -66,7 +67,8 @@ namespace Constructors {
             Console.Write("Quantidade em estoque: ");
             int quantity = int.Parse(Console.ReadLine());
 
-            Product product = new Product {
+            Product product = new Product
+            {
                 name = name,
                 price = price,
                 quantity = quantity
@@ -99,6 +101,25 @@ namespace Constructors {
             Console.Write("Diga o novo nome do produto: ");
             product.SetName(Console.ReadLine());
             Console.WriteLine($"Novo nome do produto: {product.GetName()}");
+        }
+
+        static void Properties() {
+            /* Propriedades 
+            São definições de métodos encapsulados, porém expondo uma sintaxe similar à de atributos e 
+            não de métodos
+            Uma propriedade é um membro que oferece um mecanismo felxível para ler, gravar ou calcular 
+            o valor de um campo particular. As propriedades podem ser usadas como se fossem atributos 
+            públicos, mas na verdade elas são métodos especiais chamados "acessores". Isso permite que 
+            os dados sejam acessados facilmente e ainda ajuda a promover a segurança e a flexibilidade
+            dos métodos
+            */
+
+            PropertiesProduct product = new PropertiesProduct("TV", 900.00, 10);
+            Console.WriteLine($"Nome do produto: {product.Name}");
+            Console.Write("Diga o novo nome do produto: ");
+            product.Name = Console.ReadLine();
+            Console.WriteLine($"Novo nome do produto: {product.Name}");
+            Console.WriteLine($"Dados gerais do produto: {product}");
         }
     }
 }
