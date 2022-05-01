@@ -7,7 +7,8 @@ namespace Constructors {
             //Constructors();
             //Overload();
             //AlternativeSyntax();
-            This();
+            //This();
+            Encapsulation();
         }
 
         static void Constructors() {
@@ -81,8 +82,23 @@ namespace Constructors {
             Referenciar outro construtor em um construtor
             Passar o próprio objeto como argumento na chamada de um método ou construtor
             */
+        }
 
+        static void Encapsulation() {
+            /* Encapsulamento 
+            É um princípio que consiste em esconder detalhes de implementação de um componente,
+            expondo apenas operações seguras e que o mantenha em um estado consistente
+            Regra de ouro: o objeto deve sempre estar em um estado consistente, e a própria classe
+            deve garantir isso
+            Get e Set não é usual na plataforma C# 
+            */
 
+            PrivateProduct product = new PrivateProduct("TV");
+
+            Console.WriteLine($"Nome do produto: {product.GetName()}");
+            Console.Write("Diga o novo nome do produto: ");
+            product.SetName(Console.ReadLine());
+            Console.WriteLine($"Novo nome do produto: {product.GetName()}");
         }
     }
 }
