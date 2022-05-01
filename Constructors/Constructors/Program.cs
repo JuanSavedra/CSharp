@@ -1,7 +1,8 @@
 ﻿namespace Constructors {
     class Program {
         static void Main(string[] args) {
-            Constructors();
+            //Constructors();
+            Overload();
         }
 
         static void Constructors() {
@@ -23,6 +24,31 @@
             int quantity = int.Parse(Console.ReadLine());
 
             Product product = new Product(name, price, quantity);
+        }
+
+        static void Overload() {
+            /* Sobrecarga 
+            É um recurso que uma classe possui de oferecer mais de uma operação com o mesmo nome,
+            porém com diferentes listas de parâmetros
+            */
+
+            Console.WriteLine("Entre com os dados do produto: ");
+            Console.Write("Nome: ");
+            string name = Console.ReadLine(); //Variável do nome para ser adicionado ao construtor 
+            Console.Write("Preço: ");
+            double price = double.Parse(Console.ReadLine());
+
+            Product product = new Product(name, price); //Construtor de apenas dois parâmetros
+
+            Console.WriteLine("Entre com os dados do produto: ");
+            Console.Write("Nome: ");
+            name = Console.ReadLine(); //Variável do nome para ser adicionado ao construtor 
+            Console.Write("Preço: ");
+            price = double.Parse(Console.ReadLine());
+            Console.Write("Quantidade em estoque: ");
+            int quantity = int.Parse(Console.ReadLine());
+
+            product = new Product(name, price, quantity); //Construtor com os três parâmetros
         }
     }
 }

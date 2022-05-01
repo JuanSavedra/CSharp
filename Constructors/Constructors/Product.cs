@@ -15,5 +15,11 @@ namespace Constructors {
             this.price = price;
             this.quantity = quantity;
         }
+
+        public Product(string name, double price) { //Sobrecarga
+            this.name = name;
+            this.price = price;
+            this.quantity = 0; //Linha desnecessária, pois o padrão já é zero
+        }
     }
 }
