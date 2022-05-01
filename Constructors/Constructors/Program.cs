@@ -1,8 +1,12 @@
-﻿namespace Constructors {
+﻿using System;
+using System.Globalization;
+
+namespace Constructors {
     class Program {
         static void Main(string[] args) {
             //Constructors();
-            Overload();
+            //Overload();
+            AlternativeSyntax();
         }
 
         static void Constructors() {
@@ -34,7 +38,7 @@
 
             Console.WriteLine("Entre com os dados do produto: ");
             Console.Write("Nome: ");
-            string name = Console.ReadLine(); //Variável do nome para ser adicionado ao construtor 
+            string name = Console.ReadLine();
             Console.Write("Preço: ");
             double price = double.Parse(Console.ReadLine());
 
@@ -42,13 +46,31 @@
 
             Console.WriteLine("Entre com os dados do produto: ");
             Console.Write("Nome: ");
-            name = Console.ReadLine(); //Variável do nome para ser adicionado ao construtor 
+            name = Console.ReadLine();
             Console.Write("Preço: ");
             price = double.Parse(Console.ReadLine());
             Console.Write("Quantidade em estoque: ");
             int quantity = int.Parse(Console.ReadLine());
 
             product = new Product(name, price, quantity); //Construtor com os três parâmetros
+        }
+
+        static void AlternativeSyntax() {
+            Console.WriteLine("Entre com os dados do produto: ");
+            Console.Write("Nome: ");
+            string name = Console.ReadLine();
+            Console.Write("Preço: ");
+            double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantidade em estoque: ");
+            int quantity = int.Parse(Console.ReadLine());
+
+            Product product = new Product {
+                name = name,
+                price = price,
+                quantity = quantity
+            };
+
+            Console.WriteLine(product);
         }
     }
 }
