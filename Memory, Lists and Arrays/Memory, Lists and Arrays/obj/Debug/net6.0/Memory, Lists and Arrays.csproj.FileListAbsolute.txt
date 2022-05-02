@@ -1,0 +1,15 @@
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\bin\Debug\net6.0\Memory, Lists and Arrays.exe
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\bin\Debug\net6.0\Memory, Lists and Arrays.deps.json
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\bin\Debug\net6.0\Memory, Lists and Arrays.runtimeconfig.json
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\bin\Debug\net6.0\Memory, Lists and Arrays.dll
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\bin\Debug\net6.0\Memory, Lists and Arrays.pdb
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\Memory, Lists and Arrays.csproj.AssemblyReference.cache
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\Memory, Lists and Arrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\Memory, Lists and Arrays.AssemblyInfoInputs.cache
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\Memory, Lists and Arrays.AssemblyInfo.cs
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\Memory, Lists and Arrays.csproj.CoreCompileInputs.cache
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\Memory, Lists and Arrays.dll
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\refint\Memory, Lists and Arrays.dll
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\Memory, Lists and Arrays.pdb
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\Memory, Lists and Arrays.genruntimeconfig.cache
+C:\Users\juans\Documents\Estudos\C#\Memory, Lists and Arrays\Memory, Lists and Arrays\obj\Debug\net6.0\ref\Memory, Lists and Arrays.dll
