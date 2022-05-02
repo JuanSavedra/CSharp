@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Collections.Generic;
 
 namespace MemoryListsArrays {
     class Program {
@@ -8,7 +9,8 @@ namespace MemoryListsArrays {
             //Exercise1();
             //ParamsModificator();
             //RefAndOutModificator();
-            OptionalSintax();
+            //OptionalSintax();
+            Lists();
         }
 
         static void Structs() {
@@ -226,6 +228,58 @@ namespace MemoryListsArrays {
             foreach(string obj in vect) {
                 Console.WriteLine(obj);
             }
+        }
+
+        static void Lists() {
+            /* Listas 
+            É uma estrutura de dados, iniciando-se vazia.
+            Tamanho Variável
+            Fácil acesso a inserções e deleções
+            Acesso sequencial aos elementos
+            */
+
+            List<string> list = new List<string>(); //Lista instanciada, vazia 
+            List<string> list2 = new List<string> { "Nome1", "Nome2" }; //Lista instanciada com elementos
+
+            list.Add("Bob"); //Adicionando um elemento a lista
+            Console.WriteLine(list[0]);
+            list.Add("Ana"); //Adiciona por padrão no final da lista
+            Console.WriteLine(list[1]);
+            list.Add("Lúcio");
+            Console.WriteLine(list[2]);
+            list.Add("Antônio");
+            Console.WriteLine(list[3]);
+            list.Insert(3, "Fred"); //Escolhe a posição do elemento e o adiciona
+            Console.WriteLine(list[3]);
+            Console.WriteLine(list[4]); //Antônio foi pro valor [4]
+            Console.WriteLine($"List count: {list.Count}");
+
+            string s1 = list.Find(x => x[0] == 'A' /* Expressão lambda */); /* Encontrando a primeira pessoa 
+                                                                            que começa com a letra 'A' */
+            Console.WriteLine(s1);
+
+            string s2 = list.FindLast(x => x[0] == 'A'); /* Encontrando a última pessoa que começa com 
+                                                           a letra 'A'*/
+            Console.WriteLine(s2);
+
+            int pos1 = list.FindIndex(x => x[0] == 'A'); //Posição da primeira pessoa com a letra A
+            Console.WriteLine(pos1);
+
+            int pos2 = list.FindLastIndex(x => x[0] == 'A'); //Posição da última pessoa com a letra A
+            Console.WriteLine(pos2);
+
+            //Achando pessoas com nome igual a 3 caracteres
+            List<string> list3 = list.FindAll(x => x.Length == 3);
+            foreach(string obj in list3) {
+                Console.WriteLine(obj);
+            }
+
+            /* Também temos como função os Removes
+            - Remove
+            - RemoveAll
+            - RemoveAt (posição incial)
+            - RemoveRange(posição inicial, quantidade de remoções a partir da posição inicial)
+            */
         }
     }
 }
