@@ -6,7 +6,8 @@ namespace MemoryListsArrays {
             //Structs();
             //Vectors();
             //Exercise1();
-            ParamsModificator();
+            //ParamsModificator();
+            RefAndOutModificator();
         }
 
         static void Structs() {
@@ -171,6 +172,23 @@ namespace MemoryListsArrays {
 
             Console.WriteLine(sum1);
             Console.WriteLine(sum2);
+        }
+
+        static void RefAndOutModificator() {
+            /* Modificador Ref e Out(Referência)
+            São mals-usos, sempre evitar
+            Suponha que se queira uma calculadora com uma opração para triplicar o valor
+            de um número passado como parâmetro.
+            Então criamos um ref de referência para uma variável como parâmetro
+            */
+
+            int a = 10; //É obrigatório que a variável seja iniciada nos casos ref
+            Calculator.TripleRef(ref a); //Saída: 30
+            Console.WriteLine(a);
+
+            int triple;
+            Calculator.TripleOut(a, out triple); //Não é obrigatório iniciar
+            Console.WriteLine(triple); //Saída: 90
         }
     }
 }

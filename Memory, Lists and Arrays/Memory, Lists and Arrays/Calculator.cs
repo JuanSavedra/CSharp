@@ -14,5 +14,14 @@ namespace MemoryListsArrays {
 
             return sum;
         }
+
+        public static int TripleRef(ref int x) {
+            return x = x * 3;
+        }
+
+        public static int TripleOut(int origin, out int result) { /* Nesse caso passamos o valor inicial
+                                                                  e o valor para referência */
+            return result = origin * 3; 
+        }
     }
 }
