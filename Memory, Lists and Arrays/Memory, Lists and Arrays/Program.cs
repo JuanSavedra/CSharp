@@ -4,7 +4,8 @@ namespace MemoryListsArrays {
     class Program {
         static void Main(string[] args) {
             //Structs();
-            Vectors();
+            //Vectors();
+            Exercise1();
         }
 
         static void Structs() {
@@ -58,7 +59,7 @@ namespace MemoryListsArrays {
             */
 
             //Problem1();
-            Problem2();
+            //Problem2();
 
             void Problem1() {
                 /* Problema 1
@@ -111,6 +112,55 @@ namespace MemoryListsArrays {
 
                 double average = sum / products;
                 Console.WriteLine($"Preço médio: {average.ToString("F2", CultureInfo.InvariantCulture)}");
+            }
+        }
+
+        static void Exercise1() {
+            /*
+            A dona de um pensionato possui dez quartos para alugar para estudantes,
+            sendo esses quartos identificados pelos números 0 ao 9
+            Faça um programa que inicie com todos os dez quartos vazios, e depois 
+            leia uma quantidade N representando o número de estudantes que vão alugar 
+            quartos (N pode ser de 1 ao 10). Em seguida, registre o aluguel dos N 
+            estudantes. Para cada registro de aluguel, informar o nome e email do 
+            estudante, bem como qual dos quartos ele escolheu (de 0 ao 9). Suponha
+            que seja escolhido um quarto vago. Ao final, seu programa deve imprimir 
+            um relatório de todas ocupações do pensionato, por ordem de quarto.
+            */
+
+            Console.WriteLine("Diga a quantidade de estudantes, " +
+                "temos apenas 10 quartos disponíveis: "
+            );
+            int students = int.Parse(Console.ReadLine());
+
+            if (students > 10) {
+                Console.WriteLine("Não temos quartos suficientes...");
+                Exercise1();
+            }
+
+            double rent = 1200.00;
+            int[] rooms = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            string[] studentsName = new string[students];
+            string[] studentsEmail = new string[students];
+
+            Console.WriteLine($"Quartos disponíveis: {rooms.Length}");
+            Console.WriteLine($"Aluguel: R${rent}");
+
+            for (int i = 0; i < students; i++) {
+                Console.Write("Nome do estudante: ");
+                studentsName[i] = Console.ReadLine();
+                Console.Write("Email do estudante: ");
+                studentsEmail[i] = Console.ReadLine();
+                Console.WriteLine($"Número do quarto: {rooms[i]}");
+            }
+
+            for (int i = 0; i < students; i++) {
+                Console.WriteLine("=============================");
+                Console.WriteLine($"Quarto: {rooms[i]}");
+                Console.WriteLine($"Estudante: {studentsName[i]}");
+                Console.WriteLine($"Email: {studentsEmail[i]}");
+                Console.WriteLine($"Aluguel: {rent.ToString("F2", CultureInfo.InvariantCulture)}");
+                Console.WriteLine("=============================");
             }
         }
     }
