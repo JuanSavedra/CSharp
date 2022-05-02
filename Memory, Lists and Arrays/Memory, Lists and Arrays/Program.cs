@@ -5,7 +5,8 @@ namespace MemoryListsArrays {
         static void Main(string[] args) {
             //Structs();
             //Vectors();
-            Exercise1();
+            //Exercise1();
+            ParamsModificator();
         }
 
         static void Structs() {
@@ -162,6 +163,14 @@ namespace MemoryListsArrays {
                 Console.WriteLine($"Aluguel: {rent.ToString("F2", CultureInfo.InvariantCulture)}");
                 Console.WriteLine("=============================");
             }
+        }
+
+        static void ParamsModificator() {
+            int sum1 = Calculator.Sum(new int[] { 1, 2, 3 });
+            int sum2 = Calculator.Sum(new int[] { 1, 2, 3, 4 });
+
+            Console.WriteLine(sum1);
+            Console.WriteLine(sum2);
         }
     }
 }
