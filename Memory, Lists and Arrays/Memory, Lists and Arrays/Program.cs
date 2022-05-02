@@ -7,7 +7,8 @@ namespace MemoryListsArrays {
             //Vectors();
             //Exercise1();
             //ParamsModificator();
-            RefAndOutModificator();
+            //RefAndOutModificator();
+            OptionalSintax();
         }
 
         static void Structs() {
@@ -206,6 +207,25 @@ namespace MemoryListsArrays {
             Object obj = x;
             int y = (int)obj;
             */
+        }
+
+        static void OptionalSintax() {
+            /* Foreach 
+            Sintaxe opcional e simplificada para percorrer coleções
+            Leitura: "para cada objeto 'obj' contido em vect, faça"
+            */
+
+            string[] vect = new string[] {"Maria", "Bob", "Alex"};
+
+            //Laço for: 
+            for (int i = 0; i < vect.Length; i++) { 
+                Console.WriteLine(vect[i]);
+            }
+
+            //Laço foreach: 
+            foreach(string obj in vect) {
+                Console.WriteLine(obj);
+            }
         }
     }
 }
