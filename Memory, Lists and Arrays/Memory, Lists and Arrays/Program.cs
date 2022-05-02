@@ -10,7 +10,8 @@ namespace MemoryListsArrays {
             //ParamsModificator();
             //RefAndOutModificator();
             //OptionalSintax();
-            Lists();
+            //Lists();
+            Exercise2();
         }
 
         static void Structs() {
@@ -280,6 +281,59 @@ namespace MemoryListsArrays {
             - RemoveAt (posição incial)
             - RemoveRange(posição inicial, quantidade de remoções a partir da posição inicial)
             */
+        }
+
+        static void Exercise2() {
+            /* 
+            Faça um programa para ler um número inteiro N e depois os dados (id, nome e salário)
+            de N funcionários. Não deve haver repetição de id
+            Em seguida, efetuar o aumento de X por cento no salário de um determinado funcionário
+            Para isso, o programa deve ler um id e o valor X. Se o id informado não existir, mostrar
+            uma mensagem e abortar a operação. Ao final, mostrar a listagem atualizada dos funcionários,
+            conforme exemplos
+            Lembre-se de aplicar a técnica de encapsulamento para não permitir que o salário possa ser
+            mudado livremente. Um salário só pode ser aumentado com base em uma operação de aumento por
+            porcentagem dada
+            */
+
+            int quantityEmployees;
+            Console.Write("Diga quantos funcionários deseja registrar: ");
+            quantityEmployees = int.Parse(Console.ReadLine());
+
+            Employee emp = new Employee("Desconhecido", 0, 0.00);
+            List<Employee> listEmployees = new List<Employee>();
+
+            for (int i = 0; i < quantityEmployees; i++) {
+                Console.WriteLine("===============================");
+                Console.WriteLine($"Funcionário #{i + 1}: ");
+                emp.ID = i;
+                Console.WriteLine($"ID: {emp.ID}");
+                Console.Write($"Nome: ");
+                emp.Name = Console.ReadLine();
+                Console.Write($"Salário: ");
+                emp.Salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                Console.WriteLine("===============================");
+                listEmployees.Add(new Employee(emp.Name, emp.ID, emp.Salary));
+            }
+
+            int searchID;
+            Console.Write("Escolha o ID de um usuário para aumentar seu salário em porcentagem: ");
+            searchID = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            emp = listEmployees.Find(x => x.ID == searchID);
+            if (emp != null) {
+                Console.Write("Diga a porcentagem: ");
+                double percentage = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                emp.Increase(percentage);
+            }
+            else {
+                Console.WriteLine("Esse ID não existe!");
+            }
+
+            Console.WriteLine("Lista atualizada dos funcionários: ");
+            foreach (Employee obj in listEmployees) {
+                Console.WriteLine(obj);
+            }
         }
     }
 }
