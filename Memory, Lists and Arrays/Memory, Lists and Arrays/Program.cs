@@ -11,7 +11,8 @@ namespace MemoryListsArrays {
             //RefAndOutModificator();
             //OptionalSintax();
             //Lists();
-            Exercise2();
+            //Exercise2();
+            Matrices();
         }
 
         static void Structs() {
@@ -334,6 +335,19 @@ namespace MemoryListsArrays {
             foreach (Employee obj in listEmployees) {
                 Console.WriteLine(obj);
             }
+        }
+
+        static void Matrices() {
+            /* 
+            São arrays multidimensionais 
+            */
+
+            double[,] mat = new double[2, 3 /* 2 linhas, 3 colunas */];
+
+            Console.WriteLine(mat.Length); //6 (2 * 3)
+            Console.WriteLine(mat.Rank); //2 (Linhas)
+            Console.WriteLine(mat.GetLength(0)); //2 (Posição 0 == Linhas)
+            Console.WriteLine(mat.GetLength(1)); //3 (Posição 1 == Colunas)
         }
     }
 }
