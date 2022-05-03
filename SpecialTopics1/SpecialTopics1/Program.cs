@@ -49,6 +49,18 @@
                     Console.WriteLine("Nenhum");
                     break;
             }
+
+            /* Operações ternárias */
+
+            //Método com abertura e fechamento de chaves
+            if (a > 0) {
+                a++;
+            } else {
+                a--;
+            }
+
+            //Método com operações ternárias
+            a = (a > 0) ? a++ : a--; //? = If, : = Else
         }
     }
 }
