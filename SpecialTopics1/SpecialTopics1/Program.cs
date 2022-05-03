@@ -1,7 +1,8 @@
 ﻿namespace SpecialTopics {
     class Program {
         static void Main(string[] args) {
-            Var();
+            //Var();
+            AlternativeSyntax();
         }
 
         static void Var() {
@@ -16,6 +17,38 @@
             Console.WriteLine(a);
             Console.WriteLine(b);
             Console.WriteLine(c);
+        }
+
+        static void AlternativeSyntax() {
+            /* Switch e Case */
+            int a = 0;
+            
+            //Método if
+            if (a == 0) {
+                Console.WriteLine("0");
+            } else if (a == 1) {
+                Console.WriteLine("1");
+            } else if (a == 2) {
+                Console.WriteLine("2");
+            } else {
+                Console.WriteLine("Nenhum");
+            }
+
+            //Método switch e case
+            switch (a) {
+                case 0: 
+                    Console.WriteLine("0");
+                    break;
+                case 1:
+                    Console.WriteLine("1");
+                    break;
+                case 2: 
+                    Console.WriteLine("2");
+                    break;
+                default:
+                    Console.WriteLine("Nenhum");
+                    break;
+            }
         }
     }
 }
