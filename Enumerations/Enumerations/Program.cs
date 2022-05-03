@@ -4,7 +4,8 @@ using Enumerations.Entities.Enums;
 namespace Enumerations {
     class Program {
         static void Main(string[] args) {
-            Enumeration();
+            //Enumeration();
+            Organization();
         }
 
         static void Enumeration() {
@@ -34,6 +35,21 @@ namespace Enumerations {
 
             Console.WriteLine($"Os: {os}");
             Console.WriteLine($"Txt: {txt}");
+        }
+
+        static void Organization() {
+            /* Comentando sobre organização do projeto
+            Categorias de classes: 
+            Em um sistema orientado a objetos, de modo geral "tudo" é objeto
+            Por questões de design tais como organização, flexibilidade, reuso, delegação, 
+            etc. Há várias categorias de classes
+
+            Views - Parte visual
+            Controllers - Controladores da aplicação (meio de campo)
+            Entities - Produtos, clientes, pedidos, etc
+            Services - Serviços da aplicação 
+            Repositories - Conexões
+            */
         }
     }
 }
