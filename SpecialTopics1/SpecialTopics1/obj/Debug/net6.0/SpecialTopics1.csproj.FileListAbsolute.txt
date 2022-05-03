@@ -1,0 +1,15 @@
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\bin\Debug\net6.0\SpecialTopics1.exe
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\bin\Debug\net6.0\SpecialTopics1.deps.json
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\bin\Debug\net6.0\SpecialTopics1.runtimeconfig.json
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\bin\Debug\net6.0\SpecialTopics1.dll
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\bin\Debug\net6.0\SpecialTopics1.pdb
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\SpecialTopics1.csproj.AssemblyReference.cache
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\SpecialTopics1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\SpecialTopics1.AssemblyInfoInputs.cache
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\SpecialTopics1.AssemblyInfo.cs
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\SpecialTopics1.csproj.CoreCompileInputs.cache
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\SpecialTopics1.dll
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\refint\SpecialTopics1.dll
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\SpecialTopics1.pdb
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\SpecialTopics1.genruntimeconfig.cache
+C:\Users\juans\Documents\Estudos\C#\SpecialTopics1\SpecialTopics1\obj\Debug\net6.0\ref\SpecialTopics1.dll

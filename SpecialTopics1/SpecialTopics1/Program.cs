@@ -1,9 +1,12 @@
-﻿namespace SpecialTopics {
+﻿using System.Globalization;
+
+namespace SpecialTopics {
     class Program {
         static void Main(string[] args) {
             //Var();
             //AlternativeSyntax();
-            StringFunctions();
+            //StringFunctions();
+            Datetime();
         }
 
         static void Var() {
@@ -79,6 +82,42 @@
             string = x.ToString("C3"),
             string = x.ToString("F2")
             */
+        }
+
+        static void Datetime() {
+            /* Funções de data e hora 
+            Construtores: 
+            - DateTime(ano, mês, dia)
+            - DateTime(ano, mês, dia, hora, minuto, segundo) [opcional]
+            - DateTime(ano, mês, dia, hora, minuto, segundo, milissegundo) [opcional]
+
+            Builders:
+            - DateTime.Now
+            - DateTime.UtcNow
+            - DateTime.Today [time]
+            - DateTime.Parse(string)
+            - DateTime.ParseExact(string, string)
+            */
+
+            DateTime d1 = DateTime.Now;
+            Console.WriteLine(d1);
+            Console.WriteLine(d1.Ticks); //Atualizações
+
+            DateTime d2 = DateTime.Parse("2022-05-03");
+            Console.WriteLine(d2);
+
+            DateTime d3 = DateTime.Parse("2022-05-03 13:05:58");
+            Console.WriteLine(d3);
+
+            DateTime d4 = DateTime.ParseExact("2022-05-03", "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            Console.WriteLine(d4);
+
+            DateTime d5 = DateTime.ParseExact(
+                "2022/05/03 13:05:58", 
+                "dd/MM/yyyyy HH:mm:ss", 
+                CultureInfo.InvariantCulture
+            );
+            Console.WriteLine(d5);
         }
     }
 }
