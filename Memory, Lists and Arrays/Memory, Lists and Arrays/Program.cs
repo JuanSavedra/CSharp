@@ -12,7 +12,8 @@ namespace MemoryListsArrays {
             //OptionalSintax();
             //Lists();
             //Exercise2();
-            Matrices();
+            //Matrices();
+            Exercise3();
         }
 
         static void Structs() {
@@ -348,6 +349,44 @@ namespace MemoryListsArrays {
             Console.WriteLine(mat.Rank); //2 (Linhas)
             Console.WriteLine(mat.GetLength(0)); //2 (Posição 0 == Linhas)
             Console.WriteLine(mat.GetLength(1)); //3 (Posição 1 == Colunas)
+        }
+
+        static void Exercise3() {
+            /*
+            Faça um programa para ler um número inteiro N e uma matriz de ordem N
+            contendo números inteiros. Em seguida, mostrar a diagonal principal e 
+            a quantidade de valores negativos da matriz
+            */
+            Console.WriteLine("Tamanho do array: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[,] mat = new int[n, n];
+
+            for (int l = 0; l < n; l++) {
+                string[] values = Console.ReadLine().Split(' ');
+
+                for (int c = 0; c < n; c++) {
+                    mat[l, c] = int.Parse(values[c]);
+                }
+            }
+
+            Console.WriteLine("Diagonal principal: ");
+            for (int i = 0; i < n; i++) { 
+                Console.Write(mat[i, i] + " ");
+            }
+            Console.WriteLine();
+
+            int count = 0;
+            for (int l = 0; l < n; l++) {
+                for (int c = 0; c < n; c++) {
+                    if (mat[l, c] < 0) {
+                        count++;
+                        Console.WriteLine($"Número negativo: {mat[l, c]}");
+                    }
+                }
+            }
+
+            Console.WriteLine($"Quantidade de números negativos: {count}");
         }
     }
 }
