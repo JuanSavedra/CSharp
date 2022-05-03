@@ -2,7 +2,8 @@
     class Program {
         static void Main(string[] args) {
             //Var();
-            AlternativeSyntax();
+            //AlternativeSyntax();
+            StringFunctions();
         }
 
         static void Var() {
@@ -61,6 +62,23 @@
 
             //Método com operações ternárias
             a = (a > 0) ? a++ : a--; //? = If, : = Else
+        }
+
+        static void StringFunctions() {
+            /* Funções interessantes para strings 
+            - Formatar: ToLower(), ToUpper(), Trim()
+            - Buscar: IndexOf(), LastIndexOf()
+            - Recortar: Substring(inicio), Substring(inicio, tamanho)
+            - Substituir: Replace(char, char), Replace(string, string)
+            - String.isNullOrEmpty(string), String.isNullOrWhiteSpace(string)
+            - string.Split('')
+            - Conversão para número: int x = int.Parse(string), int x = Convert.ToInt32(string)
+            - Conversão de número: 
+            string = x.ToString(), 
+            string = x.ToString("C"), 
+            string = x.ToString("C3"),
+            string = x.ToString("F2")
+            */
         }
     }
 }
