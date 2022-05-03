@@ -6,7 +6,13 @@ namespace SpecialTopics {
             //Var();
             //AlternativeSyntax();
             //StringFunctions();
-            Datetime();
+
+            /* DateTime e TimeSpan
+            Buscar propriedas de cada objeto ao ir utilizar  
+            */
+
+            //Datetime();
+            //Timespan();
         }
 
         static void Var() {
@@ -101,7 +107,7 @@ namespace SpecialTopics {
 
             DateTime d1 = DateTime.Now;
             Console.WriteLine(d1);
-            Console.WriteLine(d1.Ticks); //Atualizações
+            Console.WriteLine(d1.Ticks); //Atualizações (100 nanosegundos)
 
             DateTime d2 = DateTime.Parse("2022-05-03");
             Console.WriteLine(d2);
@@ -118,6 +124,14 @@ namespace SpecialTopics {
                 CultureInfo.InvariantCulture
             );
             Console.WriteLine(d5);
+        }
+
+        static void Timespan() {
+            /* Representa uma duração */
+
+            TimeSpan t1 = new TimeSpan(0, 1, 30);
+            Console.WriteLine(t1);
+            Console.WriteLine(t1.Ticks);
         }
     }
 }
