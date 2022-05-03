@@ -13,7 +13,8 @@ namespace MemoryListsArrays {
             //Lists();
             //Exercise2();
             //Matrices();
-            Exercise3();
+            //Exercise3();
+            Exercise4();
         }
 
         static void Structs() {
@@ -110,7 +111,7 @@ namespace MemoryListsArrays {
                     Console.Write($"Diga o nome do produto {i + 1}: ");
                     productsName[i] = Console.ReadLine();
                     Console.Write($"Diga o preço do produto {i + 1}: ");
-                    productsPrices[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture); 
+                    productsPrices[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 }
 
                 double sum = 0.0;
@@ -220,15 +221,15 @@ namespace MemoryListsArrays {
             Leitura: "para cada objeto 'obj' contido em vect, faça"
             */
 
-            string[] vect = new string[] {"Maria", "Bob", "Alex"};
+            string[] vect = new string[] { "Maria", "Bob", "Alex" };
 
             //Laço for: 
-            for (int i = 0; i < vect.Length; i++) { 
+            for (int i = 0; i < vect.Length; i++) {
                 Console.WriteLine(vect[i]);
             }
 
             //Laço foreach: 
-            foreach(string obj in vect) {
+            foreach (string obj in vect) {
                 Console.WriteLine(obj);
             }
         }
@@ -273,7 +274,7 @@ namespace MemoryListsArrays {
 
             //Achando pessoas com nome igual a 3 caracteres
             List<string> list3 = list.FindAll(x => x.Length == 3);
-            foreach(string obj in list3) {
+            foreach (string obj in list3) {
                 Console.WriteLine(obj);
             }
 
@@ -371,7 +372,7 @@ namespace MemoryListsArrays {
             }
 
             Console.WriteLine("Diagonal principal: ");
-            for (int i = 0; i < n; i++) { 
+            for (int i = 0; i < n; i++) {
                 Console.Write(mat[i, i] + " ");
             }
             Console.WriteLine();
@@ -387,6 +388,51 @@ namespace MemoryListsArrays {
             }
 
             Console.WriteLine($"Quantidade de números negativos: {count}");
+        }
+
+        static void Exercise4() {
+            /*
+            Fazer um programa para ler dois números inteiros M e N, e depois ler
+            uma matriz de M linhas por N colunas contendo números inteiros, podendo
+            haver repetições. Em seguida, ler um número inteiro X que pertence à 
+            matriz. Para cada ocorrência de X, mostrar os valores à esquerda, acima,
+            à direita e abaixo de X, quando houver, conforme exemplo
+            */
+
+            string[] line = Console.ReadLine().Split(' ');
+            int m = int.Parse(line[0]);
+            int n = int.Parse(line[1]);
+
+            int[,] mat = new int[m, n];
+
+            for (int i = 0; i < m; i++) {
+                string[] values = Console.ReadLine().Split(' ');
+                for (int j = 0; j < n; j++) {
+                    mat[i, j] = int.Parse(values[j]);
+                }
+            }
+
+            int x = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (mat[i, j] == x) {
+                        Console.WriteLine("Posição " + i + "," + j + ":");
+                        if (j > 0) {
+                            Console.WriteLine("Esquerda: " + mat[i, j - 1]);
+                        }
+                        if (i > 0) {
+                            Console.WriteLine("Cima: " + mat[i - 1, j]);
+                        }
+                        if (j < n - 1) {
+                            Console.WriteLine("Direita: " + mat[i, j + 1]);
+                        }
+                        if (i < m - 1) {
+                            Console.WriteLine("Baixo: " + mat[i + 1, j]);
+                        }
+                    }
+                }
+            }
         }
     }
 }
