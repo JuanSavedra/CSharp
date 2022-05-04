@@ -5,7 +5,8 @@ namespace InheritanceAndPolymorphism {
         static void Main(string[] args) {
             //Inheritance();
             //UpcastingDowncasting()
-            Overlap();
+            //Overlap();
+            SealedMethods();
         }
 
         static void Inheritance() {
@@ -77,6 +78,27 @@ namespace InheritanceAndPolymorphism {
 
             Console.WriteLine(account);
             Console.WriteLine(account2);
+        }
+
+        static void SealedMethods() {
+            /* Classes e métodos selados 
+            Palavra chave - sealed 
+            */
+
+            /* Classes
+            Evita que a classe seja herdada * ainda é possível extender a funcionalidade 
+            de uma classe selada usando 'extension methods'*
+            namespace Course {
+                sealed class SavingsAccount {
+                
+                }   
+            }
+            */
+
+            /* Métodos
+            Evita que um método sobreposto possa ser sobreposto novamente * Só pode ser
+            aplicado a métodos sobrepostos * 
+            */
         }
     }
 }
