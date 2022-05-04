@@ -11,7 +11,8 @@ namespace InheritanceAndPolymorphism {
             //Polymorphism();
             //Exercise1();
             //Exercise2();
-            AbstractClass();
+            //AbstractClass();
+            AbstractsMethods();
         }
 
         static void Inheritance() {
@@ -251,6 +252,19 @@ namespace InheritanceAndPolymorphism {
             - Polimorfismo
 
             Classes abstratas podem ser adicionadas em listas
+            */
+        }
+
+        static void AbstractsMethods() {
+            /* Métodos abstratos 
+            São métodos que não possuem implementação 
+            Métodos precisam ser abstratos quando a classe é genérica demais para conter sua 
+            implementação (Exemplo: Existe uma classe Formas que possue retângulo e círculo, 
+            a classe Formas é muito genérica, pois não sabemos sua forma, então se quissesemos
+            calcular a área da figura, não teria como ser pela classe Formas, pois ela é genérica,
+            então adicionariamos um método abstrato em cada figura)
+            Se uma classe possuir pelo menos um método abstrato, então esta classe também é
+            abstrata
             */
         }
     }
