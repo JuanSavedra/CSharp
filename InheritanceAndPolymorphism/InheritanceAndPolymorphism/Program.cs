@@ -1,5 +1,6 @@
 ﻿using InheritanceAndPolymorphism.Entities;
 using System.Globalization;
+using InheritanceAndPolymorphism.Entities.Enums;
 
 namespace InheritanceAndPolymorphism {
     class Program {
@@ -12,7 +13,8 @@ namespace InheritanceAndPolymorphism {
             //Exercise1();
             //Exercise2();
             //AbstractClass();
-            AbstractsMethods();
+            //AbstractsMethods();
+            Exercise3();
         }
 
         static void Inheritance() {
@@ -266,6 +268,43 @@ namespace InheritanceAndPolymorphism {
             Se uma classe possuir pelo menos um método abstrato, então esta classe também é
             abstrata
             */
+        }
+
+        static void Exercise3() {
+            /* 
+            Faça um programa ler os dados de N figuras (N fornecido pelo usuário), e depois 
+            mostrar as áreas destas figuras na mesma ordem em que foram digitadas
+            */
+
+            List<Shape> list = new List<Shape>();
+
+            Console.Write("Enter the number of shapes: ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= n; i++) {
+                Console.WriteLine($"Shape #{i} data:");
+                Console.Write("Rectangle or Circle (r/c)? ");
+                char ch = char.Parse(Console.ReadLine());
+                Console.Write("Color (Black/Blue/Red): ");
+                Color color = Enum.Parse<Color>(Console.ReadLine());
+                if (ch == 'r') {
+                    Console.Write("Width: ");
+                    double width = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    Console.Write("Height: ");
+                    double height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    list.Add(new Rectangle(width, height, color));
+                }
+                else {
+                    Console.Write("Radius: ");
+                    double radius = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    list.Add(new Circle(radius, color));
+                }
+            }
+
+            Console.WriteLine("\nShape areas:");
+            foreach (Shape shape in list) {
+                Console.WriteLine(shape.Area().ToString("F2", CultureInfo.InvariantCulture));
+            }
         }
     }
 }
