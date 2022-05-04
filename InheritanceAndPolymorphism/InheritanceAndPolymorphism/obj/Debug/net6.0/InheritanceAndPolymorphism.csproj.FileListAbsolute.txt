@@ -1,0 +1,15 @@
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\bin\Debug\net6.0\InheritanceAndPolymorphism.exe
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\bin\Debug\net6.0\InheritanceAndPolymorphism.deps.json
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\bin\Debug\net6.0\InheritanceAndPolymorphism.runtimeconfig.json
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\bin\Debug\net6.0\InheritanceAndPolymorphism.dll
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\bin\Debug\net6.0\InheritanceAndPolymorphism.pdb
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\InheritanceAndPolymorphism.csproj.AssemblyReference.cache
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\InheritanceAndPolymorphism.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\InheritanceAndPolymorphism.AssemblyInfoInputs.cache
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\InheritanceAndPolymorphism.AssemblyInfo.cs
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\InheritanceAndPolymorphism.csproj.CoreCompileInputs.cache
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\InheritanceAndPolymorphism.dll
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\refint\InheritanceAndPolymorphism.dll
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\InheritanceAndPolymorphism.pdb
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\InheritanceAndPolymorphism.genruntimeconfig.cache
+C:\Users\juans\Documents\Estudos\C#\InheritanceAndPolymorphism\InheritanceAndPolymorphism\obj\Debug\net6.0\ref\InheritanceAndPolymorphism.dll
