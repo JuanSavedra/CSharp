@@ -6,7 +6,8 @@ namespace InheritanceAndPolymorphism {
             //Inheritance();
             //UpcastingDowncasting()
             //Overlap();
-            SealedMethods();
+            //SealedMethods();
+            Polymorphism();
         }
 
         static void Inheritance() {
@@ -98,6 +99,24 @@ namespace InheritanceAndPolymorphism {
             /* Métodos
             Evita que um método sobreposto possa ser sobreposto novamente * Só pode ser
             aplicado a métodos sobrepostos * 
+            */
+        }
+
+        static void Polymorphism() {
+            /* Polimorfismo 
+            Em programação Orientada a Objetos, polimorfismo é recurso que permite que variáveis
+            de um mesmo tipo mais genérico possam apontar para objetos de tipos específicos 
+            diferentes, tendo assim comportamentos diferentes conforme cada tipo específico
+
+            A associação do tipo específico com o tipo genérico é feita em tempo de execução
+            O compilador não sabe para qual tipo espécífico a chamada do método Withdraw está
+            sendo feita (ele só sabe que são fuas variáveis tipo Account)
+
+            Account account = new Account(1001, "Alex", 500.00);
+            Account account2 = new Account(1002, "Anna", 500.00, 0.01);
+            
+            account.Withdraw(10.0);
+            account2.Withdraw(10.0);
             */
         }
     }
