@@ -10,7 +10,8 @@ namespace InheritanceAndPolymorphism {
             //SealedMethods();
             //Polymorphism();
             //Exercise1();
-            Exercise2();
+            //Exercise2();
+            AbstractClass();
         }
 
         static void Inheritance() {
@@ -225,6 +226,32 @@ namespace InheritanceAndPolymorphism {
             foreach (Product prod in list) {
                 Console.WriteLine(prod.PriceTag());
             }
+        }
+
+        static void AbstractClass() {
+            /* Classes abstratas 
+            São classes que não podem ser instanciadas
+            É uma forma de garantir herança total: somente subclasses não abstratas podem 
+            ser instanciadas, mas nunca a superclasse abstrata
+            Exemplo: 
+            Suponha que em um negócio relacionado a banco, apenas contas poupanças
+            e contas para empresas são permitidas. Não existe conta comum.
+            Para garantir que contas comuns não possam ser instanciadas, basta acrescentarmos 
+            a palavra "abstract" na declaração da classe.
+
+            namespace Course {
+                abstract class Account { }
+            }
+
+            Questionamento: 
+            Se a classe Account não pode ser instanciada, por que simplesmente não criar somente
+            SavingsAccount e BusinessAccount?
+            Resposta:
+            - Reuso
+            - Polimorfismo
+
+            Classes abstratas podem ser adicionadas em listas
+            */
         }
     }
 }
