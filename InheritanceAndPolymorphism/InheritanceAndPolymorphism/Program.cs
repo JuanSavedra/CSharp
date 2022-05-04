@@ -9,7 +9,8 @@ namespace InheritanceAndPolymorphism {
             //Overlap();
             //SealedMethods();
             //Polymorphism();
-            Exercise1();
+            //Exercise1();
+            Exercise2();
         }
 
         static void Inheritance() {
@@ -174,6 +175,55 @@ namespace InheritanceAndPolymorphism {
                 Console.WriteLine($"{emp.Name} - " +
                     $"${emp.Payment().ToString("F2", CultureInfo.InvariantCulture)}"
                 );
+            }
+        }
+
+        static void Exercise2() {
+            /*
+            Faça um programa para ler os dados de N produtos (N fornecido pelo usuário).
+            Ao final, mostrar a etiqueta de preço de cada produto na mesma ordem em que
+            foram digitados.
+            Todo produto possui nome e preço. Produtos importados possuem uma taxa de 
+            alfândega, e produtos usados possuem data de fabricação. Estes dados 
+            específicos devem ser acrescentados na etiqueta de preço. Para produtos
+            importados, a taxa e alfândega deve ser acrescentada ao preço final do 
+            produto.
+            */
+
+
+            Console.Write("Enter the number of products: ");
+            int n = int.Parse(Console.ReadLine());
+
+            Product product = new Product();
+            List<Product> list = new List<Product>();
+
+            for (int i = 0; i < n; i++) {
+                Console.WriteLine($"Product #{i + 1} data: ");
+                Console.Write("Common, used or imported (c/u/i)? ");
+                char ch = char.Parse(Console.ReadLine());
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Price: ");
+                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                if (ch == 'i') {
+                    Console.Write("Customs fee: ");
+                    double customsFee = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    list.Add(new ImportedProduct(name, price, customsFee));
+                } 
+                else if (ch == 'c') {
+                    list.Add(new Product(name, price));
+                }
+                else {
+                    Console.Write("Manufacture date (DD/MM/YYYY): ");
+                    DateTime date = DateTime.Parse(Console.ReadLine());
+                    list.Add(new UsedProduct(name, price, date));
+                }
+            }
+
+            Console.WriteLine("Price tags: ");
+            foreach (Product prod in list) {
+                Console.WriteLine(prod.PriceTag());
             }
         }
     }
