@@ -1,4 +1,5 @@
 ﻿using InheritanceAndPolymorphism.Entities;
+using System.Globalization;
 
 namespace InheritanceAndPolymorphism {
     class Program {
@@ -7,7 +8,8 @@ namespace InheritanceAndPolymorphism {
             //UpcastingDowncasting()
             //Overlap();
             //SealedMethods();
-            Polymorphism();
+            //Polymorphism();
+            Exercise1();
         }
 
         static void Inheritance() {
@@ -64,6 +66,7 @@ namespace InheritanceAndPolymorphism {
             É possível chamar a implementação da superclasse usando a palavra base
             Exemplo - Suponha que a regra para saque para conta poupança seja realizar
             o saque normalmente da superclasse (Account), e depois descontar mais 2.0
+            Deixe a função padrão com o "virtual": public virtual ...
 
             public override void Withdraw(double amount) {
                 base.Withdraw(amount);
@@ -118,6 +121,60 @@ namespace InheritanceAndPolymorphism {
             account.Withdraw(10.0);
             account2.Withdraw(10.0);
             */
+        }
+
+        static void Exercise1() {
+            /* 
+            Uma empresa possui funcionários próprios e terceirizados. Para cada funcionário,
+            deseja-se registrar nome, horas trabalhadas e valor por hora. Funcionários 
+            terceirizados possuem ainda uma despesa adicional.
+            O pagamento dos funcionários corresponde ao valor da hora multiplicado pelas horas
+            trabalhadas, sendo que os funcionário tercerizados ainda recebem um bônus 
+            correspondente a 110% de sua despesa adicional.
+            Faça um programa para ler os dados de N funcionários (N fornecido pelo usuário) e 
+            armazená-los em uma lista. Depois de ler todos os dados, mostrar nome e pagamento
+            de cada funcionário na mesma ordem em que foram digitados.
+            */
+
+            List<Employee> list = new List<Employee>();
+
+            Console.Write("Enter the number of employees: ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++) {
+                Console.WriteLine($"Employee #{i + 1} data: ");
+                Console.Write("Outsourced (y/n)? ");
+                char ch = char.Parse(Console.ReadLine());
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Hours: ");
+                int hours = int.Parse(Console.ReadLine());
+                Console.Write("Value per hour: ");
+                double valuePerHour = double.Parse(Console.ReadLine(), 
+                    CultureInfo.InvariantCulture
+                );
+
+                if (ch == 'y') {
+                    Console.Write("Additional charge: ");
+                    double additionalCharge = double.Parse(Console.ReadLine(),
+                        CultureInfo.InvariantCulture
+                    );
+
+                    list.Add(new OutsourcedEmployee (
+                        name, hours, valuePerHour, additionalCharge)
+                    );
+                } 
+                else {
+                    list.Add(new Employee(name, hours, valuePerHour));
+                }
+            }
+
+            Console.WriteLine("\nPayments: ");
+            foreach (Employee emp in list) {
+                Console.WriteLine($"{emp.Name} - " +
+                    $"${emp.Payment().ToString("F2", CultureInfo.InvariantCulture)}"
+                );
+            }
         }
     }
 }
