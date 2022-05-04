@@ -18,8 +18,8 @@ namespace InheritanceAndPolymorphism.Entities {
             Balance = balance;
         }
 
-        public void Withdraw(double amount) {
-            Balance -= amount;
+        public virtual void Withdraw(double amount) { //Virutal quer dizer que pode ser sobreposto
+            Balance -= amount + 5.0;
         }
 
         public void Deposit(double amount) {

@@ -4,7 +4,8 @@ namespace InheritanceAndPolymorphism {
     class Program {
         static void Main(string[] args) {
             //Inheritance();
-            UpcastingDowncasting();
+            //UpcastingDowncasting()
+            Overlap();
         }
 
         static void Inheritance() {
@@ -53,6 +54,29 @@ namespace InheritanceAndPolymorphism {
                 account5.UpdateBalance();
                 Console.WriteLine("Account 3 is SavingsAccounts");
             }
+        }
+
+        static void Overlap() {
+            /* Sobreposição 
+            Palavra base:
+            É possível chamar a implementação da superclasse usando a palavra base
+            Exemplo - Suponha que a regra para saque para conta poupança seja realizar
+            o saque normalmente da superclasse (Account), e depois descontar mais 2.0
+
+            public override void Withdraw(double amount) {
+                base.Withdraw(amount);
+                Balance -= 2.0;
+            }
+            */
+
+            Account account = new Account(1001, "Alex", 500.00);
+            Account account2 = new SavingsAccounts(1002, "Anna", 500.00, 0.01);
+
+            account.Withdraw(10.00);
+            account2.Withdraw(10.00);
+
+            Console.WriteLine(account);
+            Console.WriteLine(account2);
         }
     }
 }
