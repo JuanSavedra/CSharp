@@ -2,7 +2,8 @@
     class Program {
         static void Main(string[] args) {
             //Exception();
-            TryCatch();
+            //TryCatch();
+            Finally();
         }
 
         static void Exception() {
@@ -52,6 +53,24 @@
             catch (Exception e) { //Exception (Qualquer tipo de exceção)
                 Console.WriteLine(e.ToString());
             }
+        }
+
+        static void Finally() {
+            /* Bloco finally 
+            É um bloco que contém código a ser executado independentemente de ter 
+            ocorrido ou não uma exceção
+            Exemplo clássico: fechar um arquivo ou conexão de banco de dados ao final
+            do processamento
+
+            Sintaxe
+            try {
+                
+            } catch() {
+            
+            } finally {
+
+            }
+            */
         }
     }
 }
