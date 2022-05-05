@@ -1,7 +1,8 @@
 ﻿namespace ExceptionHandling {
     class Program {
         static void Main(string[] args) {
-            Exception();
+            //Exception();
+            TryCatch();
         }
 
         static void Exception() {
@@ -22,6 +23,35 @@
             - Trata de forma organizada (inclusive hierárquica) exceções de tipos diferentes
             - A exceção pode carregar dados quaisquer
             */
+        }
+
+        static void TryCatch() {
+            /* Bloco try
+            Contém o código que representa a execução normal do trecho de código que pode 
+            acarretar em uma exceção
+            */
+
+            /* Bloco catch 
+            Contém o código a ser executado caso uma exceção ocorra 
+            Deve ser especificado o tipo da exceção a ser tratada (upcasting é permitido)
+            */
+
+            try {
+                int n1 = int.Parse(Console.ReadLine());
+                int n2 = int.Parse(Console.ReadLine());
+
+                int result = n1 / n2;
+                Console.WriteLine(result); //Se for 10 / 0 dará erro
+            }
+            catch (DivideByZeroException e) {
+                Console.WriteLine("Division by zero is not allowed");
+            }
+            catch (FormatException e) {
+                Console.WriteLine("Format error!" + e.Message);
+            }
+            catch (Exception e) { //Exception (Qualquer tipo de exceção)
+                Console.WriteLine(e.ToString());
+            }
         }
     }
 }
