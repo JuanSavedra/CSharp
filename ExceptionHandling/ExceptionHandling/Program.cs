@@ -1,4 +1,5 @@
-﻿using ExceptionHandling.Entities;
+﻿using System.Globalization;
+using ExceptionHandling.Entities;
 using ExceptionHandling.Entities.Exceptions;
 
 namespace ExceptionHandling {
@@ -7,7 +8,8 @@ namespace ExceptionHandling {
             //Exception();
             //TryCatch();
             //Finally();
-            Exercise1();
+            //Exercise1();
+            Exercise2();
         }
 
         static void Exception() {
@@ -125,6 +127,38 @@ namespace ExceptionHandling {
             exceção for disparada, a execução é interrompida e cai no bloco catch correspondente
             É possível capturar inclusive outras exceções de sistema
             */
+        }
+
+        static void Exercise2() {
+            /*
+            Faça um programa para ler os dados de uma conta bancária e depois realizar um saque 
+            nesta conta bancária, mostrando o novo saldo. Um saque não pode ocorrer ou se não 
+            houver saldo na conta, ou se o valor do saque for superior ao limite de saque da 
+            conta. Implemente a conta bancária conforme o projeto abaixo
+            */
+
+            try {
+                Console.WriteLine("Enter account data: ");
+                Console.Write("Number: ");
+                int number = int.Parse(Console.ReadLine());
+                Console.Write("Holder: ");
+                string holder = Console.ReadLine();
+                Console.Write("Initial balance: ");
+                double balance = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                Console.Write("Withdraw limit: ");
+                double withdrawLimit = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                Account acc = new Account(number, holder, balance, withdrawLimit);
+
+                Console.Write("Enter the amount for withdraw: ");
+                double withdraw = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                acc.Withdraw(withdraw);
+
+                Console.WriteLine($"New balance: {acc.Balance.ToString("F2", CultureInfo.InvariantCulture)}");
+            }
+            catch (BalanceException e) {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
