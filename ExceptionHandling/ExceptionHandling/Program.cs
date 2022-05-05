@@ -1,4 +1,7 @@
-﻿namespace ExceptionHandling {
+﻿using ExceptionHandling.Entities;
+using ExceptionHandling.Entities.Exceptions;
+
+namespace ExceptionHandling {
     class Program {
         static void Main(string[] args) {
             //Exception();
@@ -85,17 +88,14 @@
             A data saída deve ser maior que a data de entrada
             */
 
-            Console.Write("Room number: ");
-            int number = int.Parse(Console.ReadLine());
-            Console.Write("Check-in date (dd/MM/yyyy): ");
-            DateTime checkIn = DateTime.Parse(Console.ReadLine());
-            Console.Write("Check-out date (dd/MM/yyyy): ");
-            DateTime checkOut = DateTime.Parse(Console.ReadLine());
+            try {
+                Console.Write("Room number: ");
+                int number = int.Parse(Console.ReadLine());
+                Console.Write("Check-in date (dd/MM/yyyy): ");
+                DateTime checkIn = DateTime.Parse(Console.ReadLine());
+                Console.Write("Check-out date (dd/MM/yyyy): ");
+                DateTime checkOut = DateTime.Parse(Console.ReadLine());
 
-            if (checkOut <= checkIn) {
-                Console.WriteLine("Error in reservation: Check-out date must be after check-in");
-            }
-            else {
                 Reservation reservation = new Reservation(number, checkIn, checkOut);
                 Console.WriteLine($"Reservation: {reservation}");
 
@@ -105,14 +105,26 @@
                 Console.Write("Check-out date (dd/MM/yyyy): ");
                 checkOut = DateTime.Parse(Console.ReadLine());
 
-                string error = reservation.UpdateDates(checkIn, checkOut);
-                if (error != null) {
-                    Console.WriteLine($"Error in reservation: {error}");
-                }
-                else {
-                    Console.WriteLine($"Reservation: {reservation}");
-                }
+                reservation.UpdateDates(checkIn, checkOut);
+                Console.WriteLine($"Reservation: {reservation}");
             }
+            catch (DomainException e) {
+                Console.WriteLine($"{e.Message}");
+            }
+            catch (FormatException e) {
+                Console.WriteLine($"Format error: {e.Message}");
+            }
+            catch (Exception e) {
+                Console.WriteLine($"Erro inesperado: {e.Message}");
+            }
+
+            /* Vantagens de tudo isso 
+            Lógica delegada
+            Construtores podem ter exceções
+            Código mais simples, Não há aninhamento de condicionais: a qualquer momento que uma
+            exceção for disparada, a execução é interrompida e cai no bloco catch correspondente
+            É possível capturar inclusive outras exceções de sistema
+            */
         }
     }
 }
